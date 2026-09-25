@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calssnapp AI | Know What You Eat</title>
+    <meta
+      name="description"
+      content="A simple nutrition tracker and meal planner for healthier choices."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">C</span>
+          <div>
+            <p class="eyebrow">Nutrition companion</p>
+            <h1>Calssnapp AI</h1>
+          </div>
+        </div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#tracker">Tracker</a>
+          <a href="#insights">Insights</a>
+          <a href="#about">About</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="tag">Know What You Eat.</p>
+            <h2>Eat smarter, feel better, and stay on track.</h2>
+            <p class="lead">
+              Log meals, understand nutrition, and build healthy habits without guesswork.
+            </p>
+            <div class="hero-actions">
+              <a href="#tracker" class="primary-btn">Track today</a>
+              <a href="#about" class="secondary-btn">Learn more</a>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Daily nutrition summary">
+            <div class="hero-card-head">
+              <span>Today</span>
+              <span class="pill success">Balanced</span>
+            </div>
+            <div class="calorie-ring">
+              <div class="ring-inner">
+                <strong id="dailyCalories">0</strong>
+                <small>cal</small>
+              </div>
+            </div>
+            <ul class="mini-stats">
+              <li><span>Protein</span><strong id="proteinValue">0g</strong></li>
+              <li><span>Carbs</span><strong id="carbValue">0g</strong></li>
+              <li><span>Fats</span><strong id="fatValue">0g</strong></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="tracker" class="tracker-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Food log</p>
+            <h3>Add your meals</h3>
+          </div>
+
+          <form id="mealForm" class="meal-form">
+            <div class="field-group">
+              <label for="mealName">Meal name</label>
+              <input id="mealName" name="mealName" type="text" placeholder="e.g. Chicken salad" required />
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="calories">Calories</label>
+                <input id="calories" name="calories" type="number" min="0" step="1" placeholder="540" required />
+              </div>
+
+              <div class="field-group">
+                <label for="protein">Protein (g)</label>
+                <input id="protein" name="protein" type="number" min="0" step="1" placeholder="30" required />
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="carbs">Carbs (g)</label>
+                <input id="carbs" name="carbs" type="number" min="0" step="1" placeholder="45" required />
+              </div>
+
+              <div class="field-group">
+                <label for="fat">Fats (g)</label>
+                <input id="fat" name="fat" type="number" min="0" step="1" placeholder="18" required />
+              </div>
+            </div>
+
+            <button type="submit" class="primary-btn full-width">Add meal</button>
+          </form>
+
+          <div class="food-list-wrap">
+            <div class="section-heading small-space">
+              <p class="eyebrow">Meals listed</p>
+              <h3>Nutrition summary</h3>
+            </div>
+            <ul id="foodList" class="food-list" aria-live="polite"></ul>
+          </div>
+        </section>
+
+        <section id="insights" class="insights-grid">
+          <article class="insight-card">
+            <p class="eyebrow">Track</p>
+            <h3>Calories</h3>
+            <p>Monitor how much energy you consume across the day.</p>
+          </article>
+
+          <article class="insight-card">
+            <p class="eyebrow">Balance</p>
+            <h3>Macros</h3>
+            <p>Review protein, carbs, and fats to stay more intentional.</p>
+          </article>
+
+          <article class="insight-card">
+            <p class="eyebrow">Build</p>
+            <h3>Habits</h3>
+            <p>Create routines that support your wellness and goals.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer id="about" class="footer">
+        <p>Calssnapp AI — helping you know what you eat.</p>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
